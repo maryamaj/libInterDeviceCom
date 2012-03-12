@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AB2DDAD150E5D75007129DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB2DDAC150E5D75007129DC /* Foundation.framework */; };
+		8AB2DDB3150E5D75007129DC /* InterDeviceCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2DDB2150E5D75007129DC /* InterDeviceCom.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AB2DDA9150E5D75007129DC /* libInterDeviceCom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInterDeviceCom.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB2DDAC150E5D75007129DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AB2DDB0150E5D75007129DC /* InterDeviceCom-Prefix.pch */ = {isa = PBXFileReference; path = "InterDeviceCom-Prefix.pch"; sourceTree = "<group>"; };
+		8AB2DDB1150E5D75007129DC /* InterDeviceCom.h */ = {isa = PBXFileReference; path = InterDeviceCom.h; sourceTree = "<group>"; };
+		8AB2DDB2150E5D75007129DC /* InterDeviceCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterDeviceCom.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AB2DDA6150E5D75007129DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB2DDAD150E5D75007129DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AB2DD9E150E5D75007129DC = {
+			isa = PBXGroup;
+			children = (
+				8AB2DDAE150E5D75007129DC /* InterDeviceCom */,
+				8AB2DDAB150E5D75007129DC /* Frameworks */,
+				8AB2DDAA150E5D75007129DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AB2DDAA150E5D75007129DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AB2DDA9150E5D75007129DC /* libInterDeviceCom.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AB2DDAB150E5D75007129DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AB2DDAC150E5D75007129DC /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB2DDAE150E5D75007129DC /* InterDeviceCom */ = {
+			isa = PBXGroup;
+			children = (
+				8AB2DDB1150E5D75007129DC /* InterDeviceCom.h */,
+				8AB2DDB2150E5D75007129DC /* InterDeviceCom.m */,
+				8AB2DDAF150E5D75007129DC /* Supporting Files */,
+			);
+			path = InterDeviceCom;
+			sourceTree = "<group>";
+		};
+		8AB2DDAF150E5D75007129DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB2DDB0150E5D75007129DC /* InterDeviceCom-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8AB2DDA7150E5D75007129DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8AB2DDA8150E5D75007129DC /* InterDeviceCom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB2DDB6150E5D75007129DC /* Build configuration list for PBXNativeTarget "InterDeviceCom" */;
+			buildPhases = (
+				8AB2DDA5150E5D75007129DC /* Sources */,
+				8AB2DDA6150E5D75007129DC /* Frameworks */,
+				8AB2DDA7150E5D75007129DC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InterDeviceCom;
+			productName = InterDeviceCom;
+			productReference = 8AB2DDA9150E5D75007129DC /* libInterDeviceCom.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AB2DDA0150E5D75007129DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = ChalmersTH;
+			};
+			buildConfigurationList = 8AB2DDA3150E5D75007129DC /* Build configuration list for PBXProject "InterDeviceCom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8AB2DD9E150E5D75007129DC;
+			productRefGroup = 8AB2DDAA150E5D75007129DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AB2DDA8150E5D75007129DC /* InterDeviceCom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AB2DDA5150E5D75007129DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB2DDB3150E5D75007129DC /* InterDeviceCom.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8AB2DDB4150E5D75007129DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AB2DDB5150E5D75007129DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AB2DDB7150E5D75007129DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/InterDeviceCom.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterDeviceCom/InterDeviceCom-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8AB2DDB8150E5D75007129DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/InterDeviceCom.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterDeviceCom/InterDeviceCom-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AB2DDA3150E5D75007129DC /* Build configuration list for PBXProject "InterDeviceCom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB2DDB4150E5D75007129DC /* Debug */,
+				8AB2DDB5150E5D75007129DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB2DDB6150E5D75007129DC /* Build configuration list for PBXNativeTarget "InterDeviceCom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB2DDB7150E5D75007129DC /* Debug */,
+				8AB2DDB8150E5D75007129DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AB2DDA0150E5D75007129DC /* Project object */;
+}
