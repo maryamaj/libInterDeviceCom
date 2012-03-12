@@ -7,16 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A57D638150E647100E33147 /* libMSSCommunicationController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A57D634150E645800E33147 /* libMSSCommunicationController.a */; };
+		8A57D63B150E674000E33147 /* InterDeviceComController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A57D639150E674000E33147 /* InterDeviceComController.h */; };
+		8A57D63C150E674000E33147 /* InterDeviceComController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A57D63A150E674000E33147 /* InterDeviceComController.m */; };
 		8AB2DDAD150E5D75007129DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB2DDAC150E5D75007129DC /* Foundation.framework */; };
-		8AB2DDB3150E5D75007129DC /* InterDeviceCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2DDB2150E5D75007129DC /* InterDeviceCom.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8A57D631150E645800E33147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A57D628150E645800E33147 /* pieMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8AA24C9514ED072700D7725C;
+			remoteInfo = pieMenu;
+		};
+		8A57D633150E645800E33147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A57D628150E645800E33147 /* pieMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A2593EA14F6811800A3D43A;
+			remoteInfo = MSSCommunicationController;
+		};
+		8A57D636150E646C00E33147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A57D628150E645800E33147 /* pieMenu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A2593E914F6811800A3D43A;
+			remoteInfo = MSSCommunicationController;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8A57D628150E645800E33147 /* pieMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pieMenu.xcodeproj; path = ../pieMenu/pieMenu.xcodeproj; sourceTree = "<group>"; };
+		8A57D639150E674000E33147 /* InterDeviceComController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterDeviceComController.h; sourceTree = "<group>"; };
+		8A57D63A150E674000E33147 /* InterDeviceComController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterDeviceComController.m; sourceTree = "<group>"; };
 		8AB2DDA9150E5D75007129DC /* libInterDeviceCom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInterDeviceCom.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB2DDAC150E5D75007129DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8AB2DDB0150E5D75007129DC /* InterDeviceCom-Prefix.pch */ = {isa = PBXFileReference; path = "InterDeviceCom-Prefix.pch"; sourceTree = "<group>"; };
-		8AB2DDB1150E5D75007129DC /* InterDeviceCom.h */ = {isa = PBXFileReference; path = InterDeviceCom.h; sourceTree = "<group>"; };
-		8AB2DDB2150E5D75007129DC /* InterDeviceCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterDeviceCom.m; sourceTree = "<group>"; };
+		8AB2DDB0150E5D75007129DC /* InterDeviceCom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterDeviceCom-Prefix.pch"; sourceTree = "<group>"; };
+		8AB2DDB1150E5D75007129DC /* InterDeviceCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterDeviceCom.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A57D638150E647100E33147 /* libMSSCommunicationController.a in Frameworks */,
 				8AB2DDAD150E5D75007129DC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,9 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A57D629150E645800E33147 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A57D632150E645800E33147 /* pieMenu.app */,
+				8A57D634150E645800E33147 /* libMSSCommunicationController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8AB2DD9E150E5D75007129DC = {
 			isa = PBXGroup;
 			children = (
+				8A57D628150E645800E33147 /* pieMenu.xcodeproj */,
 				8AB2DDAE150E5D75007129DC /* InterDeviceCom */,
 				8AB2DDAB150E5D75007129DC /* Frameworks */,
 				8AB2DDAA150E5D75007129DC /* Products */,
@@ -60,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				8AB2DDB1150E5D75007129DC /* InterDeviceCom.h */,
-				8AB2DDB2150E5D75007129DC /* InterDeviceCom.m */,
+				8A57D639150E674000E33147 /* InterDeviceComController.h */,
+				8A57D63A150E674000E33147 /* InterDeviceComController.m */,
 				8AB2DDAF150E5D75007129DC /* Supporting Files */,
 			);
 			path = InterDeviceCom;
@@ -81,6 +121,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A57D63B150E674000E33147 /* InterDeviceComController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +139,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8A57D637150E646C00E33147 /* PBXTargetDependency */,
 			);
 			name = InterDeviceCom;
 			productName = InterDeviceCom;
@@ -123,6 +165,12 @@
 			mainGroup = 8AB2DD9E150E5D75007129DC;
 			productRefGroup = 8AB2DDAA150E5D75007129DC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8A57D629150E645800E33147 /* Products */;
+					ProjectRef = 8A57D628150E645800E33147 /* pieMenu.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8AB2DDA8150E5D75007129DC /* InterDeviceCom */,
@@ -130,16 +178,41 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		8A57D632150E645800E33147 /* pieMenu.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = pieMenu.app;
+			remoteRef = 8A57D631150E645800E33147 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A57D634150E645800E33147 /* libMSSCommunicationController.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMSSCommunicationController.a;
+			remoteRef = 8A57D633150E645800E33147 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8AB2DDA5150E5D75007129DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AB2DDB3150E5D75007129DC /* InterDeviceCom.m in Sources */,
+				8A57D63C150E674000E33147 /* InterDeviceComController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A57D637150E646C00E33147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSSCommunicationController;
+			targetProxy = 8A57D636150E646C00E33147 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8AB2DDB4150E5D75007129DC /* Debug */ = {
@@ -187,9 +260,13 @@
 		8AB2DDB7150E5D75007129DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				DSTROOT = /tmp/InterDeviceCom.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InterDeviceCom/InterDeviceCom-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/blender/Documents/iPhone Dev/pieMenu/MSSCommunicationController\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -199,9 +276,13 @@
 		8AB2DDB8150E5D75007129DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				DSTROOT = /tmp/InterDeviceCom.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InterDeviceCom/InterDeviceCom-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/blender/Documents/iPhone Dev/pieMenu/MSSCommunicationController\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -227,6 +308,7 @@
 				8AB2DDB8150E5D75007129DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

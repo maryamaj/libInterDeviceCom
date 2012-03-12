@@ -7,7 +7,4 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface InterDeviceCom : NSObject
-
-@end
+#import "InterDeviceComController.h"
