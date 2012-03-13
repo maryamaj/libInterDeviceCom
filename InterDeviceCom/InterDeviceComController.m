@@ -11,6 +11,7 @@
 @implementation InterDeviceComController
 
 @synthesize udpSockets = _udpSockets;
+@synthesize delegate = _delegate;
 
 + (id) sharedController
 {
@@ -50,10 +51,37 @@
     
 }
 
+-(void) sendData:(NSData *) data toDevice:(DeviceInformation*) device{
+
+    GCDAsyncUdpSocket* sock = [_udpSockets objectForKey:device];
+    
+    if(sock != nil)
+        [sock sendData:data withTimeout:-1 tag:device.contactDescriptorByteValue];
+    
+}
+
+-(void) broadcastData:(NSData *)data {
+
+    NSArray* array = [_udpSockets allValues];
+    
+    for(int i = 0; i  < array.count; i++){
+    
+        GCDAsyncUdpSocket* sock = [array objectAtIndex:i];
+        [sock sendData:data withTimeout:-1 tag:0];
+    }
+
+}
+
 #pragma mark -
 #pragma mark GCDAsyncUdpSocketDelegate Protocol
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data fromAddress:(NSData *)address withFilterContext:(id)filterContext{
+    
+    if ([_delegate conformsToProtocol:@protocol(InterDeviceComProtocol)]) {
+        
+        NSString* host = [GCDAsyncUdpSocket hostFromAddress:address];
+        [_delegate receivedData:data fromHost:host];
+    }
 }
 
 @end
