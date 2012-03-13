@@ -34,4 +34,6 @@
 -(void) connectToDevice:(DeviceInformation*) device onPort:(int) port;
 -(void) broadcastData:(NSData *) data;
 -(void) sendData:(NSData *) data toDevice:(DeviceInformation*) device;
+-(void) disconnectFromDevice:(DeviceInformation*) device;
+-(void) disconnectAll;
 @end

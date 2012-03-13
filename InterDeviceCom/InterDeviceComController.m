@@ -51,13 +51,46 @@
     
 }
 
+-(void) disconnectFromDevice:(DeviceInformation *)device {
+
+    NSNumber* descByteValue = [NSNumber numberWithUnsignedChar:device.contactDescriptorByteValue];
+    GCDAsyncUdpSocket* sock = [_udpSockets objectForKey:descByteValue];
+    
+    if(sock != nil){
+    
+        [sock close];
+    }
+}
+
+-(void) disconnectAll{
+
+    NSArray* sockarr = [_udpSockets allValues];
+    NSArray* keyarr = [_udpSockets allKeys];
+    
+    //FIXME: This assumes one value per key
+    //It could screw up the entire dictionary
+    
+    for(int i = 0; i  < keyarr.count; i++){
+        
+        GCDAsyncUdpSocket* sock = [sockarr objectAtIndex:i];
+        DeviceInformation* device = [keyarr objectAtIndex:i];
+        [sock close];
+        
+        [_udpSockets removeObjectForKey:device];
+    }
+
+}
+
 -(void) sendData:(NSData *) data toDevice:(DeviceInformation*) device{
 
     GCDAsyncUdpSocket* sock = [_udpSockets objectForKey:device];
     
-    if(sock != nil)
+    if(sock != nil){
+        NSError* error;
+        
         [sock sendData:data withTimeout:-1 tag:device.contactDescriptorByteValue];
-    
+        [sock beginReceiving:&error];
+    }
 }
 
 -(void) broadcastData:(NSData *)data {
@@ -65,9 +98,11 @@
     NSArray* array = [_udpSockets allValues];
     
     for(int i = 0; i  < array.count; i++){
-    
+        NSError* error;
+        
         GCDAsyncUdpSocket* sock = [array objectAtIndex:i];
         [sock sendData:data withTimeout:-1 tag:0];
+        [sock beginReceiving:&error];
     }
 
 }
