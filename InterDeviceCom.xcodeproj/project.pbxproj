@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A57D638150E647100E33147 /* libMSSCommunicationController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A57D634150E645800E33147 /* libMSSCommunicationController.a */; };
-		8A57D63B150E674000E33147 /* InterDeviceComController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A57D639150E674000E33147 /* InterDeviceComController.h */; };
+		8A5425D1150F5BA2006F4E5B /* InterDeviceCom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB2DDB1150E5D75007129DC /* InterDeviceCom.h */; settings = {ATTRIBUTES = (); }; };
+		8A57D638150E647100E33147 /* libMSSCommunicationController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A57D634150E645800E33147 /* libMSSCommunicationController.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		8A57D63B150E674000E33147 /* InterDeviceComController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A57D639150E674000E33147 /* InterDeviceComController.h */; settings = {ATTRIBUTES = (); }; };
 		8A57D63C150E674000E33147 /* InterDeviceComController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A57D63A150E674000E33147 /* InterDeviceComController.m */; };
 		8AB2DDAD150E5D75007129DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB2DDAC150E5D75007129DC /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -121,6 +122,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5425D1150F5BA2006F4E5B /* InterDeviceCom.h in Headers */,
 				8A57D63B150E674000E33147 /* InterDeviceComController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +220,7 @@
 		8AB2DDB4150E5D75007129DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
@@ -236,13 +238,14 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		8AB2DDB5150E5D75007129DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
@@ -253,6 +256,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -267,7 +271,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"/Users/blender/Documents/iPhone Dev/pieMenu/MSSCommunicationController\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -283,7 +287,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"/Users/blender/Documents/iPhone Dev/pieMenu/MSSCommunicationController\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
