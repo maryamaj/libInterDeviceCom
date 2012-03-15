@@ -268,9 +268,7 @@
 				DSTROOT = /tmp/InterDeviceCom.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InterDeviceCom/InterDeviceCom-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"/Users/blender/Documents/iPhone Dev/pieMenu/MSSCommunicationController\"",
-				);
+				HEADER_SEARCH_PATHS = /Users/maryam/Documents/pieMenu/MSSCommunicationController;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -284,9 +282,7 @@
 				DSTROOT = /tmp/InterDeviceCom.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InterDeviceCom/InterDeviceCom-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"/Users/blender/Documents/iPhone Dev/pieMenu/MSSCommunicationController\"",
-				);
+				HEADER_SEARCH_PATHS = /Users/maryam/Documents/pieMenu/MSSCommunicationController;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
