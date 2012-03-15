@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 ChalmersTH. All rights reserved.
 //
 
-#define kIDCPORT 4765
+#define kIDCPORT 40765
 
 #import <Foundation/Foundation.h>
 #import "GCDAsyncUdpSocket.h"
@@ -24,6 +24,7 @@
 @interface InterDeviceComController : NSObject <GCDAsyncUdpSocketDelegate>
 {
     NSMutableDictionary* _udpSockets;
+    GCDAsyncUdpSocket* serverSocket;
     __weak id <InterDeviceComProtocol> _delegate;
 }
 
@@ -31,6 +32,7 @@
 @property (weak, nonatomic) id<InterDeviceComProtocol> delegate;
 
 +(id)sharedController;
+-(void) startServer;
 -(void) connectToDevice:(DeviceInformation*) device onPort:(int) port;
 -(void) broadcastData:(NSData *) data;
 -(void) sendData:(NSData *) data toDevice:(DeviceInformation*) device;

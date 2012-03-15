@@ -13,7 +13,7 @@
 @synthesize udpSockets = _udpSockets;
 @synthesize delegate = _delegate;
 
-+ (id) sharedController
++ (InterDeviceComController *) sharedController
 {
     static dispatch_once_t pred = 0;
     __strong static id _sharedObject = nil;
@@ -23,7 +23,7 @@
     return _sharedObject;
 }
 
-- (id)init
+- (InterDeviceComController *)init
 {
     self = [super init];
     if (self) {
@@ -31,6 +31,19 @@
     }
     
     return self;
+}
+
+-(void) startServer{
+
+    NSError* error;
+    
+    serverSocket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    if([serverSocket bindToPort:kIDCPORT error:&error]){
+    
+       [serverSocket beginReceiving:&error]; 
+    }
+    
+
 }
 
 - (void) connectToDevice:(DeviceInformation *)device onPort:(int)port{
@@ -83,13 +96,23 @@
 
 -(void) sendData:(NSData *) data toDevice:(DeviceInformation*) device{
 
-    GCDAsyncUdpSocket* sock = [_udpSockets objectForKey:device];
+    NSNumber* descByteValue = [NSNumber numberWithUnsignedChar:device.contactDescriptorByteValue];
+    GCDAsyncUdpSocket* sock = [_udpSockets objectForKey:descByteValue];
+    
+    
+    if(sock == nil){
+        sock = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+        [_udpSockets setObject:sock forKey:descByteValue];
+    }
+    
     
     if(sock != nil){
         NSError* error;
         
-        [sock sendData:data withTimeout:-1 tag:device.contactDescriptorByteValue];
-        [sock beginReceiving:&error];
+        [sock sendData:data toHost:device.ipAddr port:kIDCPORT withTimeout:-1 tag:0];
+        if(error != nil)
+            NSLog(@"%@", error.description);
+        //[sock beginReceiving:&error];
     }
 }
 
@@ -119,4 +142,13 @@
     }
 }
 
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag{
+    
+    //NSLog(@"SpinchModel Sent");
+}
+
+-(void) udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error{
+
+     NSLog(@"%@", error.description);
+}
 @end
